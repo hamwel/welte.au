@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  @keyframes meteor {
+    0% {
+      transform: rotate(45deg) translateX(-500px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(45deg) translateX(2500px);
+      opacity: 0;
+    }
+  }
+
+  .animate-meteor {
+    animation: meteor 4s linear infinite;
+  }
+}
